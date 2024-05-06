@@ -1,19 +1,24 @@
 :root {
-    
+    --avatar-size: 200px;
 }
-
 body{
+    position: relative;
+    padding: 0px;
     margin: 0px;
     width: 100%;
     background-color: rgb(26, 40, 51);
+    overflow-x:hidden;
 }
 
 
 /* ------ Navbar ------ */
 
 nav {
+    position: sticky;
+    top:0;
     padding: 10px;
-    background-color: rgb(32, 32, 32);
+    background-color: rgba(32, 32, 32, 0.5);
+    backdrop-filter: blur(4px);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -28,6 +33,7 @@ nav > a {
     padding: 5px 10px;
     color: #ffe;
     background-color: rgb(50,50,50);
+    align-content: center;
 }
 
 nav > a:hover{
@@ -36,10 +42,94 @@ nav > a:hover{
 }
 
 #lightdark {
-    border-radius: 5px;
+    /* border-radius: 5px; */
     cursor: pointer;
 }
 #lightdark:hover {
     scale: 1.1;
 }
 
+/* ------ Portafolio ------ */
+
+#portafolio{
+    color: #fff;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 10px;
+    max-width: 600px;
+}
+
+#presentacion{
+    height: 80%;
+    width: 100%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+#avatar{
+    /* margin: auto; */
+    flex: 200px;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+    order: 1;
+}
+
+#avatar > img{
+    width: 100%;
+}
+
+#descripcion{
+    flex:368px;
+    padding: 15px;
+    width: 100%;
+    order:2;
+}
+
+#presentacion > h1{
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+.titulo_seccion{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0px;
+}
+
+.titulo_seccion > h2{
+    margin:0px 10px;
+}
+
+.break-line{
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 1px;
+}
+
+.break-line-b{
+    height: 5px;
+    /* border: 1px solid black; */
+    background-color: rgba(70, 70, 70, 0.5);
+    border-radius: 5px;
+}
+
+.mb-div{
+    margin-bottom: 40px;
+}
+
+.mb-div-2{
+    margin-bottom: 60px;
+}
+
+
+@media screen and (max-width: 640px) {
+    #avatar{
+        /* flex: 100%; */
+        flex:none;
+    }
+}
