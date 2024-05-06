@@ -1,0 +1,45 @@
+:root {
+    
+}
+
+body{
+    margin: 0px;
+    width: 100%;
+    background-color: rgb(26, 40, 51);
+}
+
+
+/* ------ Navbar ------ */
+
+nav {
+    padding: 10px;
+    background-color: rgb(32, 32, 32);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+nav > a {
+    text-decoration: none;
+    /* border: 2px solid rgb(29, 29, 29); */
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: #ffe;
+    background-color: rgb(50,50,50);
+}
+
+nav > a:hover{
+    scale: 1.1;
+    background-color: rgb(65, 65, 65);
+}
+
+#lightdark {
+    border-radius: 5px;
+    cursor: pointer;
+}
+#lightdark:hover {
+    scale: 1.1;
+}
+
