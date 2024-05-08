@@ -170,7 +170,7 @@ h3{
 }
 
 .card_image{
-    width: 200px;
+    width: var(--avatar-size);
 }
 
 .card_content{
@@ -182,6 +182,7 @@ h3{
 
 .card_image > img{
     width: 100%;
+    max-width: var(--avatar-size);
 }
 
 .badge{
@@ -215,7 +216,8 @@ h3{
 }
 
 #img_sobre_mi > img{
-    width: var(--avatar-size);
+    width: 100%;
+    max-width: var(--avatar-size);
 }
 
 @media screen and (max-width: 640px) {
@@ -227,6 +229,7 @@ h3{
     /* --- Card ---- */
     .card_project{
         grid-template-columns:1fr;
+        overflow-x: hidden;
     }
     .card_image{
         margin: auto;
