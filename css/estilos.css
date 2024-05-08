@@ -1,12 +1,13 @@
 :root {
     --avatar-size: 200px;
-    --font-body: sans-serif;
+    --font-body: 'Ubuntu';
     --color-principal: #fff;
     --color-p:#ebebeb;
 }
 body{
     /* position: relative; */
     font-family: var(--font-body);
+    
     padding: auto;
     margin: auto;
     width: 100%;
@@ -21,6 +22,7 @@ p {
 /* ------ Navbar ------ */
 
 nav {
+    z-index: 1;
     position: sticky;
     top:0;
     padding: 10px;
@@ -92,6 +94,11 @@ h3{
     order: 1;
 }
 
+#avatar:hover{
+    animation: 2s ringcolor infinite linear;
+    scale: 1.04;
+}
+
 #avatar > img{
     width: 100%;
 }
@@ -101,11 +108,16 @@ h3{
     padding: 15px;
     width: 100%;
     order:2;
+    font-weight: 500;
+}
+
+#descripcion p{
+    margin: 5px 2px;
 }
 
 #descripcion > h1{
     margin-top: 5px;
-    
+    margin-bottom: 5px;
 }
 
 .subdate{
@@ -208,7 +220,7 @@ h3{
     align-items: center;
 }
 #text_sobre_mi{
-    flex: 380px;
+    flex: 370px;
 }
 
 #img_sobre_mi{
@@ -240,5 +252,20 @@ h3{
     }
     #img_sobre_mi{
         text-align: center;
+    }
+}
+
+@keyframes ringcolor {
+    0% {
+        border-color:rgb(101, 188, 255);
+    }
+    33% {
+        border-color:rgb(255, 157, 101);
+    }
+    66% {
+        border-color:rgb(127, 255, 101);
+    }
+    100% {
+        border-color:rgb(101, 188, 255);
     }
 }
