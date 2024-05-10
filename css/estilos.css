@@ -216,15 +216,16 @@ h3{
 
 /* ---- Sobre mi ---- */
 #content_sobre_mi{
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 #text_sobre_mi{
-    flex: 370px;
+    /* flex: 370px; */
 }
 
 #img_sobre_mi{
-    flex: 200px;
+    /* flex: 200px; */
+    text-align: center;
 }
 
 #img_sobre_mi > img{
