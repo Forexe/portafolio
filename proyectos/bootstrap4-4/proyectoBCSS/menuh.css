@@ -1,0 +1,39 @@
+.bd-navbar{
+    background-color: #563d7c;
+}
+#blanquito {
+    position: sticky;
+    top:0;
+    left: 0;
+    z-index: 10;
+}
+.git {
+    margin: auto;
+}
+#falsebody{
+    position: absolute;
+    top:70px;
+    padding: 0% 3%;
+    text-align: justify;
+}
+
+#absolute{
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+@media (max-width:768px){
+    #blanquito{
+        position:relative;
+    }
+    #falsebody{
+        top:240px;
+    }
+}
+
+@media (max-width:810px){
+    #descarga {
+        display: none;
+    }
+}

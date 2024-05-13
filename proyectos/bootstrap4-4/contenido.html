@@ -1,0 +1,126 @@
+<!----------------------------------------------------------------
+ *****************************************************************
+ ** Alumno: López Mendiola Rodrigo          Fecha: 2/Marzo/2020 **
+ *****************************************************************
+ ** Descripción:                                                **
+ ** Está página HTML hace uso de bootstrap para el diseño de    **
+ ** página web real, para hacer lo más similar posible la página**
+ ** oficial de bootstrap                                        **
+ *****************************************************************
+ ------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit-no"> 
+    <title>Contenido - RLM</title>
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="proyectoBCSS/menuh.css">
+    <link rel="stylesheet" href="proyectoBCSS/cuerpo.css">
+    <link rel="stylesheet" href="proyectoBCSS/fontello.css">
+    <link rel="stylesheet" href="proyectoBCSS/fontello-codes.css">
+    
+</head>
+
+<body>
+ 
+  <div style="position: sticky;top: 0; left: 0; z-index: 10;">
+   <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+       <a href="#" class="navbar-brand"><span style="border: 1px solid white; padding: 0px 8px; border-radius: 10%;">B</span></a>
+       <div class="navbar-nav-scroll">
+           <ul class="navbar-nav bd-navbar flex-row">
+               <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+               <li class="nav-item"><a class="nav-link active" href="">Documentación</a></li>
+               <li class="nav-item"><a class="nav-link" href="Ejemplos.html">Ejemplos</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://icons.getbootstrap.com/">Iconos</a></li>
+               <li class="nav-item"><a target="_blank" class="nav-link" href="https://themes.getbootstrap.com/">Temas</a></li>
+               <li class="nav-item"><a target="_blank" class="nav-link" href="https://expo.getbootstrap.com/">Expo</a></li>
+               <li class="nav-item"><a target="_blank" class="nav-link" href="https://blog.getbootstrap.com/">Blog</a></li>
+           </ul>
+       </div>
+          <div class="git">
+              
+          </div>
+           <ul class="navbar-nav">
+               <li class="nav-item" aria-label="GitHub"><a class="nav-link icon-github-circled" href="https://github.com/twbs/bootstrap"></a></li>
+               <li class="nav-item" aria-label="Twitter"><a class="nav-link icon-twitter" href="https://twitter.com/getbootstrap"></a></li>
+               <li class="nav-item" aria-label="Slack"><a class="nav-link icon-hashtag" href="https://bootstrap-slack.herokuapp.com/"></a></li>
+               <li class="nav-item" aria-label="Open Collective"><a class="nav-link icon-spin1" href="https://opencollective.com/bootstrap/"></a></li>
+               <li class="nav-item"><a href="" id="descarga" class="btn btn-outline-warning"><strong>Descarga</strong></a></li>
+           </ul>
+   </header>
+       <nav class="col-lg-2 col-md-3 navbar navbar-expand-md navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="menua collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="nav flex-column">
+                      <li class="nav-item">
+                          <a class="nav-link" href="documentacion.html">Empezar</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="documentacion.html" >Introducción</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" href="diseno.html">Diseño</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link active" href="contenido.html"><strong>Contenido</strong></a>
+                      </li>
+                </ul>
+          </div>
+        </nav>
+      </div>
+      <!---Cuerpo de la página-->
+   <div id="falsebody" class="row">
+       <div class="col-lg-2 col-md-3">
+       </div>
+       <div class="col-lg-8 col-md-9 col-12">
+          <h1 style="font-weight: 100">Reboot</h1>
+          <p>Reboot es una colección de elementos específicos de cambios CSS en un solo archivo, inicia Bootstrap para proveer una  base elegante, coherente y simple sobre la que construir</p>
+          <img src="imagenes/stockimg.png" alt="Stock img">
+          <h2 id="enfoque">Enfoque</h2>
+          <p>El reinicio se basa en Normalize, proporcionando muchos elementos HTML con estilos algo opinionados usando solo selectores de elementos. El estilo adicional se realiza solo con clases. Por ejemplo, ejecutamos algunos estilos de <span class="rojo">&#60;table></span> para una línea base más sencilla y, posteriormente, proporcionamos <span class="rojo">.table</span>,<span class="rojo">.table-bordered</span>, y más.</p>
+          <p>Estas son nuestras pautas y razones para elegir qué reemplazar e Reboot</p>
+          <ul>
+              <li>Actualice algunos valores predeterminados del explorador para usar <span class="rojo">rem</span>s en lugar de <span class="rojo">en</span>s para el espaciado de componentes escalables.</li>
+              <li>Evitar <span class="rpjp">.margin-topmargin</span>. Los márgenes verticales pueden colapsar, lo que produce resultados inesperados. Sin embargo, lo que es más importante, una sola dirección de es un modelo mental más simple.</li>
+              <li>Para facilitar el escalado entre los tamaños de dispositivo, los elementos de bloque deben usar <span class="rojo">rem</span>s para <span class="rojo">margin</span></li>
+              <li>Mantenga las declaraciones de propiedades <span class="rojo">font</span> relacionadas con el mínimo, utilizando <span class="rojo">inherit</span> siempre que sea posible.</li>
+          </ul>
+          <h2 id="encabezados">Encabezados y párrafos</h2>
+          <p>Todos los elementos de encabezado (por ejemplo, &#60;h1>) y &#60;p> se restablecen para que se elimine su <span class="rojo">margin-top</span>. A los encabezados se les ha añadido <span class="rojo">margin-bottom: .5rem</span> y a los párrafos <span class="rojo">margin-bottom: 1rem</span> para facilitar el espaciado.</p>
+          <img src="imagenes/tablaHeader.png" alt="Head" width="100%">
+          <h2 id="tablas">Tablas</h2>
+          <p>Las tablas están ligeramente ajustadas al estilo <span class="red">&#60;caption></span>s, contraen los bordes y garantizan una coherencia <span class="rojo">text-align</span> en todo momento. Los cambios adicionales para bordes, relleno y más vienen con la clase .tables</p>
+          <div>
+          <img src="imagenes/Tablas.png" width="100%" alt="Tablas">
+          <br><caption style="width: 450px">Este es un ejemplo y este es un caption para describir el contenido </caption>
+          </div>
+       </div>
+       <div class="col-lg-2 quick" id="menulat">
+           <ul class="nav flex-column">
+                      <li class="nav-item">
+                          <a class="nav-link active" href="#enfoque">Enfoque</a></li>
+                              <li><a href="#encabezados">Encabezados</a></li>
+                              <li><a href="#tablas">Tablas</a></li>
+                              <li><a href="#responsivo">Responsivo</a></li>
+                      
+                </ul>
+       </div>
+   </div>
+</body>
+</html>
+<!----------------------------------------------------------------
+ *****************************************************************
+ ** Alumno: López Mendiola Rodrigo          Fecha: 2/Marzo/2020 **
+ *****************************************************************
+ ** Descripción:                                                **
+ ** Está página HTML hace uso de bootstrap para el diseño de    **
+ ** página web real, para hacer lo más similar posible la página**
+ ** oficial de bootstrap                                        **
+ *****************************************************************
+ ------------------------------------------------------------------>

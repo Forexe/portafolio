@@ -1,0 +1,101 @@
+.bg-light{
+    padding: 4%;
+}
+.bg-light{
+    border: 1px solid white;
+}
+#boot p{
+    color: gray;
+    font-size: 19px;
+}
+
+#buttonp{
+    color:#563d7c:
+}
+
+#buttonp:hover{
+    background-color: #563d7c;
+    color: white;
+}
+
+figure{
+    font-family: monospace;
+    font-size: 16px;
+    overflow: auto;
+}
+.negro li a {
+    font-size: 13px;
+    color:darkslategray;
+    font-weight: 700;
+    padding: 0;
+    margin-right: 25px;
+}
+#fakefooter{
+    font-size: 14px;
+    color:darkslategray;
+}
+
+.quick a,.menu a{
+    margin:0px;
+    padding: 0px;
+    color: gray;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.quick a:hover{
+    color: deepskyblue;
+}
+
+.rojo {
+    color: red;
+}
+
+.menua a:hover{
+    color: darkslategray;
+}
+.quick ul{
+    color:gray;
+    font-size: 15px;
+    list-style: none;
+}
+.bg-light{
+    margin: 0;
+    padding: 2%;
+}
+.bg-light ul li{
+    margin: 5px;
+}
+
+#menulat {
+    z-index: 10;
+}
+
+
+
+#falsebodyp{
+    font-size: 24px;
+    
+}
+
+@media (max-width:768px){
+    #boot p,#boot h1 {
+        text-align: center;
+    }
+    .navbar-nav{
+    flex-wrap: wrap;
+}
+}
+@media (max-width:992px){
+    #menulat {
+        display:none;
+    }
+}
+@media (min-width:768px){
+    .menua a{
+        margin:0px;
+        padding: 0px;
+        color: gray;
+        font-size: 15px;
+    }
+}
