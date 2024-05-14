@@ -190,7 +190,9 @@ h3{
 }
 
 .card_image{
-    width: var(--avatar-size);
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .card_content{
@@ -202,7 +204,7 @@ h3{
 
 .card_image > img{
     width: 100%;
-    max-width: var(--avatar-size);
+    max-width: 300px;
 }
 
 .badge{
