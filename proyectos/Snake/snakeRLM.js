@@ -6,7 +6,7 @@ var tamano = 10;
 
 //Variable que almacena la puntuación
 var score = 0;
-var maxScore = sessionStorage.getItem("snakeMaxScore") ? sessionStorage.getItem("snakeMaxScore") : 0;
+var maxScore = localStorage.getItem("snakeMaxScore") ? localStorage.getItem("snakeMaxScore") : 0;
 
 //Clase padre que va a heredar sus atributos y funciones a los demás objetos
 class objeto {
@@ -183,7 +183,7 @@ function puntuar(){
 	score++;
 	if(score > maxScore){
 		maxScore = score;
-		sessionStorage.setItem("snakeMaxScore", maxScore);
+		localStorage.setItem("snakeMaxScore", maxScore);
 		document.getElementById('max-score').innerHTML = maxScore;
 	}
 	document.getElementById('current-score').innerHTML = score;

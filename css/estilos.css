@@ -185,12 +185,13 @@ h3{
     /* border: 2px solid rgb(36, 55, 70); */
     background-color: rgb(36, 55, 70);
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     margin-top: 5px;
 }
 
 .card_image{
-    width: 300px;
+    width: 250px;
+    height: 230px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -203,30 +204,72 @@ h3{
 }
 
 .card_image > img{
-    width: 100%;
-    max-width: 300px;
+    height: 100%;
+    /* max-width: 300px; */
 }
 
 .badge{
     display: inline-flex;
     align-items:center;
     border-radius: 20px;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     padding: 5px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 2px;
 }
+
+/* .badge > svg{
+    background-color: rgb(36, 55, 70);
+    border-radius: 50%;
+    padding: 4px;
+} */
 
 .badge_text{
     margin-left: 5px;
     margin-right: 5px;
+    font-weight: bold;
+    /* text-shadow: 1px 1px 1px rgb(56, 56, 56) */
+}
+
+.demo_link{
+    color:black;
+    background-color: white;
+}
+
+.badge_js{
+    background-color: rgb(223, 189, 0);
+}
+
+.badge_html{
+    background-color: rgb(255, 115, 0);
+}
+
+.badge_css{
+    background-color: rgb(0, 119, 255);
+}
+.badge_bootstrap{
+    background-color: rgb(119, 0, 255);
+}
+.badge_flask{
+    background-color: rgb(224, 224, 224);
+    color: black;
+}
+.badge_python{
+    background-image: linear-gradient(45deg, rgb(0, 89, 255), rgb(255, 252, 57));
+}
+.badge_mysql{
+    background-image: linear-gradient(45deg, rgb(45, 108, 226), rgb(194, 194, 193));
 }
 
 .badge:hover{
-    scale: 1.1;
+    scale: 1.05;
+    box-shadow: 0px 0px 5px cyan;
+    
 }
 
 /* ---- Sobre mi ---- */
 #content_sobre_mi{
-    display: flex;
+    display: block;
     align-items: center;
 }
 #text_sobre_mi{
@@ -234,13 +277,23 @@ h3{
 }
 
 #img_sobre_mi{
-    flex: 200px;
+    /* flex: 200px; */
     /* text-align: center; */
 }
 
 #img_sobre_mi > img{
     width: 100%;
     max-width: var(--avatar-size);
+}
+
+#paleta{
+    position: relative;
+    top:-45px;
+    max-height: 245px; 
+
+    /* overflow: hidden;  */
+    float: right;
+    /* border: 2px solid black; */
 }
 
 @media screen and (max-width: 640px) {
