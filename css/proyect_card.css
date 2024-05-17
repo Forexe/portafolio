@@ -1,0 +1,53 @@
+/* ----- Proyectos ----- */
+
+.card_project{
+    display: grid;
+    max-height: 270px;
+    grid-template-columns:1fr 2fr;
+    border-radius: 20px;
+    /* border: 2px solid rgb(36, 55, 70); */
+    background-color: rgb(36, 55, 70);
+    align-items: center;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.card_image{
+    width: 250px;
+    height: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card_content{
+    margin-left: 15px;
+}
+.card_title{
+    margin: 5px 0;
+}
+
+.card_text{
+    max-height: 110px;
+    overflow-y: auto;
+}
+
+.card_icons{
+    max-height: 76px;
+}
+
+.card_image > img{
+    height: 100%;
+    /* max-width: 300px; */
+    transition: 0.4s
+}
+
+.card_image:hover{
+    box-shadow: 0px 0px 10px cyan;
+    scale: 1.01;
+}
+.card_image > img:hover{
+    scale:1.25;
+    cursor:pointer;
+    /* max-width: 300px; */
+}
+
