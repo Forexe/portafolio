@@ -1,6 +1,7 @@
 @import url("./badges.css");
 @import url("./proyect_card.css");
 @import url("./scrollbar.css");
+@import url("./galeria.css");
 
 :root {
     --avatar-size: 200px;

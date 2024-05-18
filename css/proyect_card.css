@@ -29,6 +29,7 @@
 .card_text{
     max-height: 110px;
     overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .card_icons{

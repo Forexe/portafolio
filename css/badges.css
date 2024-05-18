@@ -75,6 +75,10 @@
 .badge_django{
     background: #0C4B33;
 }
+.badge_redis{
+    background: rgb(255, 51, 0);
+}
+
 .badge_mysql{
     background-image: linear-gradient(45deg, rgb(45, 108, 226), rgb(194, 194, 193));
 }
