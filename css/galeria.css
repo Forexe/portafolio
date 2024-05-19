@@ -51,6 +51,7 @@
 }
 
 #galery_image{
+    display: flex;
     position: relative;
     height: 90%;
     margin: auto;
@@ -98,14 +99,14 @@
     /* max-width: 90%; */
 }
 
-@media only screen and (max-width: 930px){
+@media only screen and (max-width: 830px){
     #galery_image{
         width: 90%;
         height: auto;
     }
 
     #galery_image > img{
-        max-width: 90%;
+        max-width: 100%;
         height: auto;
     }
 }
