@@ -13,6 +13,7 @@
 }
 
 .card_image{
+    position: relative;
     width: 250px;
     height: 230px;
     border-radius: 10px;
@@ -46,10 +47,36 @@
     box-shadow: 0px 0px 10px cyan;
     scale: 1.01;
 }
-.card_image > img:hover{
+.card_image:hover > img{
     scale:1.25;
     cursor:pointer;
     /* max-width: 300px; */
+}
+
+.card_image > .show_gallery{
+    opacity: 0;
+    position: absolute;
+    color: rgb(49, 75, 95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 35%;
+    top: 45%;
+    transition: 0.4s
+}
+
+.card_image:hover > .show_gallery {
+    opacity: 1;
+
+    /* align-items: center; */
+    scale: 1.25;
+    cursor:pointer;
+    color: rgb(2, 139, 139);
+}
+
+.show_gallery p {
+    color: rgb(2, 139, 139);
+    margin: 0;
 }
 
 @media only screen and (max-width: 640px){

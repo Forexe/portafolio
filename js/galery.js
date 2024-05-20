@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', function(){
     })
     cards_images = document.getElementsByClassName("card_image");
 
-    // for(var i = 0; i < cards_images.length; i++){
-    //     console.log(cards_images[i])
-    // }
-
-
     for(var card of cards_images){
         card.addEventListener('click', showgalery);
     }
@@ -16,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function(){
     //     element.addEventListener('click', keyefect)
     // });
     // document.getElementById("galeria").addEventListener('keydown', keyefect)
+
+    console.log(document.getElementById("paletaGif").onplaying);
 })
 
 function showgalery(){
@@ -85,7 +82,7 @@ function armarGaleria(proyectName){
     for(var i = 0; i < proyectos.length; i++){
         // console.log("si es "+ proyectName)
         if(proyectos[i].name === proyectName){
-            console.log("si es "+ proyectName)
+            // console.log("si es "+ proyectName)
             // let gal_img = document.getElementById("galery_image")
             let gal_img_list = document.getElementById("galery_image_list")
             gal_img_list.innerHTML = ""
@@ -100,7 +97,7 @@ function armarGaleria(proyectName){
             for(var img_src of proyectos[i].datos){
                 new_list_img = document.createElement("img")
                 new_list_img.setAttribute("src", img_src)
-                console.log(img_src)
+                // console.log(img_src)
                 new_list_img.setAttribute("onclick", "setGalleryMain('"+img_src+"')")
                 gal_img_list.appendChild(new_list_img)
                 
