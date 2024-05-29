@@ -80,7 +80,7 @@ function armarGaleria(proyectName){
             for(var img_src of proyectos[i].datos){
                 new_list_img = document.createElement("img")
                 new_list_img.setAttribute("src", img_src)
-                
+                new_list_img.setAttribute("alt", img_src.split("/")[3].split(".")[0])
                 new_list_img.setAttribute("onclick", "setGalleryMain('"+img_src+"')")
                 gal_img_list.appendChild(new_list_img)
                 
@@ -97,6 +97,7 @@ function setGalleryMain(image_src){
     let gal_img = document.getElementById("gallery_image")
     let new_gal_img = document.createElement("img")
     new_gal_img.setAttribute("src", image_src)
+    new_gal_img.setAttribute("alt", image_src.split("/")[3].split(".")[0])
     gal_img.innerHTML = "";
     gal_img.appendChild(new_gal_img)
 }

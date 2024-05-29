@@ -37,6 +37,7 @@ nav {
     padding: 10px;
     background-color: rgba(32, 32, 32, 0.5);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -220,6 +221,34 @@ h3{
     z-index: 0;
 } */
 
+.hrTitulo_seccion{
+    background-image: linear-gradient(45deg, var(--hrColor) 80%, white, var(--hrColor));
+    margin-top: 4px;
+    height: 4px;
+    border-radius: 4px;
+    background-position:0%;
+    animation: 3s linear infinite;
+    animation-name: background_move;
+}
+
+#footer{
+    /* display: flex;
+    justify-content: space-between;
+    align-items:center; */
+    color:cadetblue;
+}
+
+@keyframes background_move {
+    0%{
+        background-position: 0px;
+    }
+    50%{
+        /* background-position: 50px; */
+    }
+    100%{
+        background-position: 600px;
+    }
+}
 
 @media screen and (max-width: 640px) {
     #avatar{

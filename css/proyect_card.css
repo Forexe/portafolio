@@ -45,10 +45,12 @@
 
 .card_image:hover{
     box-shadow: 0px 0px 10px cyan;
-    scale: 1.01;
+    transform: scale(1.01);
+    /* scale: 1.01; */
 }
 .card_image:hover > img{
-    scale:1.25;
+    transform: scale(1.25);
+    /* scale:1.25; */
     cursor:pointer;
     /* max-width: 300px; */
 }
@@ -67,9 +69,9 @@
 
 .card_image:hover > .show_gallery {
     opacity: 1;
-
     /* align-items: center; */
-    scale: 1.25;
+    transform: scale(1.25);
+    /* scale: 1.25; */
     cursor:pointer;
     color: rgb(2, 139, 139);
 }
@@ -82,6 +84,7 @@
 @media only screen and (max-width: 640px){
     .card_project{
         max-height: fit-content;
+        max-height: -moz-fit-content;
     }
 
 }
