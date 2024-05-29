@@ -78,6 +78,9 @@
 .badge_redis{
     background: rgb(255, 51, 0);
 }
+.badge_email{
+    background: #dd4b39;
+}
 
 .badge_mysql{
     background-image: linear-gradient(45deg, rgb(45, 108, 226), rgb(194, 194, 193));

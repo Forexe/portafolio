@@ -1,23 +1,17 @@
 document.addEventListener('DOMContentLoaded', function(){
-    document.getElementById("galery_close").addEventListener('click', function(){
+    document.getElementById("gallery_close").addEventListener('click', function(){
         document.getElementById("galeria").style = "display:none;"
     })
     cards_images = document.getElementsByClassName("card_image");
 
     for(var card of cards_images){
-        card.addEventListener('click', showgalery);
+        card.addEventListener('click', showgallery);
     }
-    // cards_images.forEach(element => {
-    //     element.addEventListener('click', keyefect)
-    // });
-    // document.getElementById("galeria").addEventListener('keydown', keyefect)
-
-    console.log(document.getElementById("paletaGif").onplaying);
 })
 
-function showgalery(){
-    // console.log(this.getAttribute("--data-galeryName"));
-    armarGaleria(this.getAttribute("--data-galeryName"));
+function showgallery(){
+
+    armarGaleria(this.getAttribute("--data-galleryName"));
     document.getElementById("galeria").style = "display:block;";
 }
 
@@ -74,44 +68,33 @@ let proyectos = [
 
 
 function armarGaleria(proyectName){
-    // if(localStorage.getItem("galery_current") == proyectName ){
-    //     return
-    // }
-    // console.log("entro")
-    // localStorage.setItem("galery_current", proyectName)
+
     for(var i = 0; i < proyectos.length; i++){
-        // console.log("si es "+ proyectName)
+        
         if(proyectos[i].name === proyectName){
-            // console.log("si es "+ proyectName)
-            // let gal_img = document.getElementById("galery_image")
-            let gal_img_list = document.getElementById("galery_image_list")
+            let gal_img_list = document.getElementById("gallery_image_list")
             gal_img_list.innerHTML = ""
 
             setGalleryMain(proyectos[i].datos[0])
-            
-            // let new_gal_img = document.createElement("img")
-            // new_gal_img.setAttribute("src", proyectos[i].datos[0])
-            // gal_img.innerHTML = "";
-            // gal_img.appendChild(new_gal_img)
 
             for(var img_src of proyectos[i].datos){
                 new_list_img = document.createElement("img")
                 new_list_img.setAttribute("src", img_src)
-                // console.log(img_src)
+                
                 new_list_img.setAttribute("onclick", "setGalleryMain('"+img_src+"')")
                 gal_img_list.appendChild(new_list_img)
                 
             }
             break;
         }else{
-            // console.log("next try")
+            
         }
     }
 
 }
 
 function setGalleryMain(image_src){
-    let gal_img = document.getElementById("galery_image")
+    let gal_img = document.getElementById("gallery_image")
     let new_gal_img = document.createElement("img")
     new_gal_img.setAttribute("src", image_src)
     gal_img.innerHTML = "";
