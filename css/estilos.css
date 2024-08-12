@@ -209,8 +209,8 @@ h3{
     display: block;
     align-items: center;
 }
-#text_sobre_mi{
-    /* flex: 370px; */
+#text_sobre_mi p{
+    text-align: justify;
 }
 
 #img_sobre_mi{
