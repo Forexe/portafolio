@@ -8,6 +8,8 @@
     --font-body: 'Ubuntu';
     --color-principal: #fff;
     --color-p:#ebebeb;
+    scroll-behavior:smooth;
+    scroll-padding: 65px;
 }
 body{
     /* position: relative; */
@@ -43,6 +45,7 @@ nav {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    border-bottom: 2px rgb(42, 74, 122) solid;
 }
 
 nav > a {
