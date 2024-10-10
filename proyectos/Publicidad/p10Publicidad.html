@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- Se agregaron los estilos mencionados en los comentarios, así como un div con id publicidad
+    el 10-mayo-2024-->
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicidad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color:white;
+        }
+        /* Agregados los siguientes estilos del body el 10-may-2024 */
+        body{
+            display: flex;
+            justify-content: center;
+            margin-top:5% ;
+            margin-bottom:5% ;
+            background-color: rgb(150, 150, 150);
+        }
+        /* Agregados los siguientes estilos el 10-may-2024 */
+        #publicidad {
+            background-image: url(imagenespub/tosin-abasiungood.png);
+            background-size: 100%; 
+            /* background-size: 600px; */
+            background-repeat: no-repeat;
+            max-width: 600px;
+            border-radius: 15px;
+        }
+        .contenedor {
+            display:table;
+            margin:auto;
+        }
+        .renglones {
+            display: table-row;
+            border: 0 1px 0 0;
+            border-color: white;
+        }
+        .columna {
+            display: table-cell;             
+        }
+        div {
+            padding: 5px;
+        }
+        .logo {
+            padding-left: 3px;
+            width: 80px;
+        }
+        .ticket {
+            border: 1px solid white;
+            border-radius: 15px;
+            color:white;
+            background-color: black;
+        }
+        .renglones h4 {
+            text-align: left;
+        }
+        .izq {
+            text-align: left;
+        }
+        
+            @font-face {font-family:f_gloria; src: url("fontpub/GloriaHallelujah.ttf")}
+            @font-face {font-family:f_pragati; src: url("fontpub/PragatiNarrow-Regular.ttf")}
+            @font-face {font-family:f_viga; src: url("fontpub/Viga-Regular.ttf")}
+            @font-face {font-family:f_mont; src: url("fontpub/Montserrat-Regular.ttf")}
+            
+            .gloria{font-family:f_gloria;}
+            .pragati{font-family:f_pragati;}
+            .viga{font-family:f_viga;}
+            .mont{font-family:f_mont;}
+        
+        .tosin {
+            font-size: 50px;
+            line-height: 1;
+            margin-bottom: 10px;
+            color: #f8f82f;
+        }
+        .clinica {
+            color:white;
+        }
+        .event {
+            margin-top:70px;
+        }
+        .event h1,span {
+            margin-left:5%;
+        }
+        .RJP {
+            position:relative;
+            width: 96px;
+            height: 150px;
+
+            top:-6px;
+            left:9%;
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 10px;            
+            
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
+        }
+        .RJP p {
+            font-weight: 900;
+            color:black;
+        }
+        .amarillo {
+            color:yellow;
+        }
+        .centrado {
+            text-align: center;
+        }
+        .ticket {
+            font-family: sans-serif;
+        }
+        .thead h4 {
+            color:red;
+        }
+        .thead span {
+            font-weight: 100;
+        }
+        .thead h5 {
+            color:yellow;
+        }
+        .ancho {
+            width: 80%;
+            margin: auto;
+        }
+        .medio {
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="publicidad">
+        <div class="RJP">
+            <br>
+            <br>
+            <img src="imagenespub/RJPT.png" width="80px" alt="RJP">
+            <p>PRESENTA</p>
+        </div>
+        
+         <div class="event">
+             <h1 class="gloria tosin izq">TOSIN <br> ABASI</h1>
+             <h3 class="clinica izq gloria"><span>CLINICA / CONCIERTO SOLISTA</span> <br>___________________________</h3>
+             <h3 class="izq pragati"><span class="amarillo">INVITADOS ESPECIALES</span> HUGO LOYO ARIANE Y ALEX VALENCIA</h3>
+         </div>
+         <div class="contenedor mont">
+             <div class="renglones">
+                 <div class="columna"><p>DOMINGO <br> <strong>21 OCT</strong> <br> 2018, 18HRS*</p></div>
+                 <div class="columna medio"><img src="imagenespub/QualityGuitarT.png" width="75px" alt="Quality Guitar"><br><p>SAN JACINTO 16 <br> SAN ANGEL, CDMX</p></div>
+             </div>
+         </div>
+         <div class="thead mont">
+             <h4>¡BOLETOS SUPER AGOTADOS!</h4>
+             <h5><span>RIFA DE 7</span> GUITARRAS AUTOGRAFIADAS <br>100<span>PREMIOS EN LLEGAR*</span> FOTO Y FIRMA CON TOSIN ABASI</h5>
+         </div>
+         <div class="contenedor ticket">
+             <div class="renglones">
+                 <div class="columna"><h4><i>Boletos en</i><br><strong>ticketmaster.com.mx</strong></h4></div>
+                 <div class="columna">
+                 <img class="logo" src="imagenespub/mixuplogoT.png" width="100px" alt="mixup">
+                 <img src="imagenespub/LiverpoolT.png" width="100px" alt=""  class="logo">
+                 <img src="imagenespub/ffranciaT.png" alt="fabricas de francia" width="100" class="logo"><br>
+                 <img src="imagenespub/MegaLogoT.png" alt="mega" width="100" class="logo">
+                 <img src="imagenespub/BodegaLogoT.png" alt="bodega comercial" width="100" class="logo">
+                 <img src="imagenespub/gandhiT.png" alt="gandhi" width="100" class="logo">
+                 </div>
+             </div>
+         </div>
+         <div class="thead mont ancho">
+             <h6>Puntos de Venta: <span>Quality Guitar | Genesys Roma | Genesys Satélite | Bazar Lomas Verdes (Loc.735) | Bazar Pericoapa (Loc. B-75 y B-76) | Espectáculos RJP (inbox)</span></h6>
+         </div>
+    </div>
+</body>
+</html>

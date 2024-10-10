@@ -5,18 +5,18 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: rgb(84, 123, 151); 
+    background: rgb(107, 161, 201); 
     border-radius: 10px;
 
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(49, 75, 95); 
+    background: rgb(62, 103, 134); 
     border-radius: 10px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(58, 96, 122); 
+    background: rgb(72, 122, 155); 
   }

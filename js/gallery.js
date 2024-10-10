@@ -47,6 +47,14 @@ let snake_img = [
     "img/proyectos/snake/Snake_mockup3.jpg",
 ]
 
+let drawme_img = [
+    "img/proyectos/drawme/DrawmeMockup1.jpg",
+    "img/proyectos/drawme/DrawmeMockup2-1.jpg",
+    "img/proyectos/drawme/DrawmeMockup3-1.jpg",
+    "img/proyectos/drawme/DrawmeMockup4-1.jpg",
+    "img/proyectos/drawme/DrawmeMockup5-1.jpg"
+]
+
 let proyectos = [
         {
             "name" : "Bootstrap",
@@ -63,6 +71,10 @@ let proyectos = [
         {
             "name" : "Snake",
             "datos" : snake_img
+        },
+        {
+            "name" : "Drawme",
+            "datos" : drawme_img
         }
     ]
 
