@@ -120,12 +120,14 @@ renderScene();
 // console.log(section_portafolio.clientWidth+ " "+ section_portafolio.clientHeight);
 
 function resizeModels(){
-    if(section_portafolio.clientWidth >= 600){
-        laptop.position.x = -0.75;
-        maceta.position.x = 0.75;
-    }else{
-        laptop.position.x = -0.25;
-        maceta.position.x = 0;
+    if(laptop && maceta){
+        if(section_portafolio.clientWidth >= 600){
+            laptop.position.x = -0.75;
+            maceta.position.x = 0.75;
+        }else{
+            laptop.position.x = -0.25;
+            maceta.position.x = 0;
+        }
     }
 }
 
