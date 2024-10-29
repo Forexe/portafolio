@@ -7,13 +7,30 @@ document.addEventListener('DOMContentLoaded', function(){
     for(var card of cards_images){
         card.addEventListener('click', showgallery);
     }
+
 })
+
+function changeLD(event){
+    let lightdark = document.getElementById("lightdark");
+    let current_theme = lightdark.getAttribute("current-theme");
+    if(current_theme == "dark"){
+        console.log("change to light");
+        lightdark.setAttribute("current-theme","light")
+        for(propiedad of darkMode) document.documentElement.style.setProperty(propiedad.propiedad, propiedad.valor);
+        
+        return
+    }
+    console.log("change to dark");
+    for(propiedad of lightMode) document.documentElement.style.setProperty(propiedad.propiedad, propiedad.valor);
+    lightdark.setAttribute("current-theme","dark")
+}
 
 function showgallery(){
 
     armarGaleria(this.getAttribute("--data-galleryName"));
     document.getElementById("galeria").style = "display:block;";
 }
+
 
 let bookstrap_img = [
     "img/proyectos/bootstrap4-4/Bootstrap4-4-mockupV2-1.jpg",
@@ -113,3 +130,145 @@ function setGalleryMain(image_src){
     gal_img.innerHTML = "";
     gal_img.appendChild(new_gal_img)
 }
+
+var darkMode = [
+    {
+        "propiedad": "--bg-color",
+        "valor": "rgb(26, 40, 51)"
+    },
+    {
+        "propiedad": "--bg-color-portfolio",
+        "valor": "rgb(231, 231, 231, 0)"
+    },
+    {
+        "propiedad":"--color-principal",
+        "valor": "#fff"
+    },
+    {
+        "propiedad": "--color-p",
+        "valor": "#ebebeb"
+    },
+    {
+        "propiedad": "--color-nav",
+        "valor": "rgba(32, 32, 32, 0.5)"
+    },
+    {
+        "propiedad": "--color-nav-",
+        "valor": ":#ffe"
+    },
+    {
+        "propiedad": "--color-nav-bg-a",
+        "valor": "rgb(65, 65, 65)"
+    },
+    {
+        "propiedad": "--color-nav-bg-a-hover",
+        "valor": "rgb(65, 65, 65)"
+    },
+    {
+        "propiedad": "--resaltado-color",
+        "valor": "rgb(236, 145, 60)"
+    },
+    {
+        "propiedad": "--color-miNombre",
+        "valor": "rgb(46, 155, 238)"
+    },
+    {
+        "propiedad": "--color-subdate",
+        "valor": "rgb(155, 154, 154)"
+    },
+    {
+        "propiedad": "--color-breakline",
+        "valor": "rgb(187, 187, 187)"
+    },
+    {
+        "propiedad": "--color-breakline-b",
+        "valor": "rgba(70, 70, 70, 0.5)"
+    },
+    {
+        "propiedad": "--color-breakline-c",
+        "valor": "rgb(49, 75, 95);"
+    },
+    {
+        "propiedad": "--footer-color:",
+        "valor": "cadetblue"
+    },
+    {
+        "propiedad": "--bg-color-card",
+        "valor": "rgb(36, 55, 70)"
+    },
+    {
+        "propiedad":"--badge-hover-color",
+        "valor": "cyan"
+    },
+]
+
+var lightMode = [
+    {
+        "propiedad": "--bg-color",
+        "valor": "rgb(164, 198, 214)"
+    },
+    {
+        "propiedad": "--bg-color-portfolio",
+        "valor": "rgb(241, 241, 241)"
+    },
+    {
+        "propiedad":"--color-principal",
+        "valor": "black"
+    },
+    {
+        "propiedad": "--color-p",
+        "valor": "black"
+    },
+    {
+        "propiedad": "--color-nav",
+        "valor": "rgba(11, 98, 148, 0.5)"
+    },
+    {
+        "propiedad": "--color-nav-",
+        "valor": "#ffe"
+    },
+    {
+        "propiedad": "--color-nav-bg-a",
+        "valor": "rgb(36, 106, 134)"
+    },
+    {
+        "propiedad": "--color-nav-bg-a-hover",
+        "valor": "rgb(65, 65, 65)"
+    },
+    {
+        "propiedad": "--resaltado-color",
+        "valor": "rgb(202, 100, 3)"
+    },
+    {
+        "propiedad": "--color-miNombre",
+        "valor": "rgb(1, 105, 185)"
+    },
+    {
+        "propiedad": "--color-subdate",
+        "valor": "rgb(72, 78, 82)"
+    },
+    {
+        "propiedad": "--color-breakline",
+        "valor": "rgb(109, 163, 194)"
+    },
+    {
+        "propiedad": "--color-breakline-b",
+        "valor": "rgba(49, 141, 216, 0.5)"
+    },
+    {
+        "propiedad": "--color-breakline-c",
+        "valor": "rgb(36, 145, 228)"
+    },
+    {
+        "propiedad": "--footer-color:",
+        "valor": "rgb(1, 117, 121)"
+    },
+    {
+        "propiedad": "--bg-color-card",
+        "valor": "rgb(146, 198, 238)"
+    },
+    {
+        "propiedad":"--badge-hover-color",
+        "valor": "rgb(0, 175, 175)"
+    },
+]
