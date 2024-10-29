@@ -15,14 +15,19 @@ function changeLD(event){
     let current_theme = lightdark.getAttribute("current-theme");
     if(current_theme == "dark"){
         console.log("change to light");
+        setTimeout(()=> {
+            for(propiedad of lightMode) document.documentElement.style.setProperty(propiedad.propiedad, propiedad.valor);
+        },100);
         lightdark.setAttribute("current-theme","light")
-        for(propiedad of darkMode) document.documentElement.style.setProperty(propiedad.propiedad, propiedad.valor);
-        
+
         return
     }
     console.log("change to dark");
-    for(propiedad of lightMode) document.documentElement.style.setProperty(propiedad.propiedad, propiedad.valor);
-    lightdark.setAttribute("current-theme","dark")
+    lightdark.setAttribute("current-theme","dark");
+    setTimeout( () =>
+        {for(propiedad of darkMode) document.documentElement.style.setProperty(propiedad.propiedad, propiedad.valor)}
+        ,100);
+    return
 }
 
 function showgallery(){
@@ -129,6 +134,53 @@ function setGalleryMain(image_src){
     new_gal_img.setAttribute("alt", image_src.split("/")[3].split(".")[0])
     gal_img.innerHTML = "";
     gal_img.appendChild(new_gal_img)
+}
+
+// Transition theme
+
+let lastClick;
+addEventListener("click", (event) => (lastClick = event));
+
+function circleTransition(data, funcion) {
+    // Fallback for browsers that don’t support this API:
+    if (!document.startViewTransition) {
+      funcion(data);
+      return;
+    }
+  
+    // Get the click position, or fallback to the middle of the screen
+    // const x = lastClick?.clientX ?? innerWidth / 2;
+    // const y = lastClick?.clientY ?? innerHeight / 2;
+  
+    const x = data.clientX ?? window.innerWidth / 2;
+    const y = data.clientY ?? window.innerHeight / 2;
+    // Get the distance to the furthest corner
+    const endRadius = Math.hypot(
+      Math.max(x, innerWidth - x),
+      Math.max(y, innerHeight - y)
+    );
+  
+    // Create a transition:
+    const transition = document.startViewTransition(funcion(data));
+  
+    // Wait for the pseudo-elements to be created:
+    transition.ready.then(() => {
+      // Animate the root’s new view
+      document.documentElement.animate(
+        {
+          clipPath: [
+            `circle(0 at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ],
+        },
+        {
+          duration: 700,
+          easing: "ease-in-out",
+          // Specify which pseudo-element to animate
+          pseudoElement: "::view-transition-new(root)",
+        }
+      );
+    });
 }
 
 var darkMode = [

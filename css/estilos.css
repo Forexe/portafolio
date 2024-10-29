@@ -3,10 +3,22 @@
 @import url("./scrollbar.css");
 @import url("./galeria.css");
 
+::view-transition-image-pair(root) 
+{
+  isolation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root){
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+
 :root {
     --avatar-size: 200px;
     --font-body: 'Ubuntu';
-    /* --bg-color:rgb(26, 40, 51);
+    --bg-color:rgb(26, 40, 51);
     --bg-color-portfolio:rgb(231, 231, 231, 0);
     --color-principal: #fff;
     --color-p:#ebebeb;
@@ -24,9 +36,9 @@
     
     --bg-color-card: rgb(36, 55, 70);
     
-    --badge-hover-color: cyan; */
+    --badge-hover-color: cyan;
    
-    --bg-color:rgb(164, 198, 214);
+    /* --bg-color:rgb(164, 198, 214);
     --bg-color-portfolio:rgb(241, 241, 241);
     --color-principal: black;
     --color-p:black;
@@ -44,7 +56,7 @@
 
     --bg-color-card: rgb(146, 198, 238);
 
-    --badge-hover-color: rgb(0, 175, 175);
+    --badge-hover-color: rgb(0, 175, 175); */
 
     scroll-behavior:smooth;
     scroll-padding: 65px;
@@ -126,6 +138,7 @@ h3{
 }
 
 #portafolio{
+    /* view-transition-name: portafolio; */
     color: var(--color-principal);
     /* justify-content: center; */
     background-color: var(--bg-color-portfolio);
@@ -358,6 +371,9 @@ h3{
     #avatar{
         /* flex: 100%; */
         flex:none;
+    }
+    body{
+        
     }
 
     /* --- Card ---- */
