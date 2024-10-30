@@ -214,7 +214,7 @@ var darkMode = [
     },
     {
         "propiedad": "--color-nav-bg-a-hover",
-        "valor": "rgb(65, 65, 65)"
+        "valor": "rgb(80, 80, 80)"
     },
     {
         "propiedad": "--resaltado-color",
@@ -285,7 +285,7 @@ var lightMode = [
     },
     {
         "propiedad": "--color-nav-bg-a-hover",
-        "valor": "rgb(65, 65, 65)"
+        "valor": "rgb(41, 123, 155)"
     },
     {
         "propiedad": "--resaltado-color",
