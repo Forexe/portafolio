@@ -33,6 +33,11 @@ function changeLD(event){
 function showgallery(){
 
     armarGaleria(this.getAttribute("--data-galleryName"));
+    let portadaImg = this.childNodes[1].src
+
+    if (portadaImg) setGalleryMain(portadaImg);
+    else document.getElementById("gallery_image").innerHTML = "<p>No hay imágen para mostrar.</p>";
+
     document.getElementById("galeria").style = "display:block;";
 }
 
@@ -77,6 +82,13 @@ let drawme_img = [
     "img/proyectos/drawme/DrawmeMockup5-1.jpg"
 ]
 
+let landing_threejs = [
+    "img/proyectos/landingwthreejs/LWTjs_Portada.jpg",
+    "img/proyectos/landingwthreejs/LWTjs_Detalles.jpg",
+    "img/proyectos/landingwthreejs/LWTjs_Detalles2.jpg",
+    "img/proyectos/landingwthreejs/LWTjs_Otros.jpg"
+]
+
 let proyectos = [
         {
             "name" : "Bootstrap",
@@ -97,16 +109,20 @@ let proyectos = [
         {
             "name" : "Drawme",
             "datos" : drawme_img
+        },
+        {
+            "name" : "LandingWThree",
+            "datos" : landing_threejs
         }
     ]
 
 
 function armarGaleria(proyectName){
-
+    let encontrado = false;
     for(var i = 0; i < proyectos.length; i++){
         
-        if(proyectos[i].name === proyectName){
-            let gal_img_list = document.getElementById("gallery_image_list")
+        if(proyectos[i].name === proyectName && !encontrado){
+            let gal_img_list = document.getElementById("gallery_image_list");
             gal_img_list.innerHTML = ""
 
             setGalleryMain(proyectos[i].datos[0])
@@ -119,12 +135,17 @@ function armarGaleria(proyectName){
                 gal_img_list.appendChild(new_list_img)
                 
             }
+            encontrado = true;
             break;
         }else{
             
         }
     }
+    if(!encontrado){
+        let gal_img_list = document.getElementById("gallery_image_list");
+        gal_img_list.innerHTML = "<p style='color:yellow; font-weight:bold;'>No se encontraron imagenes para mostrar.</p>";
 
+    }
 }
 
 function setGalleryMain(image_src){
