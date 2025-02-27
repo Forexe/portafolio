@@ -22,7 +22,7 @@ camera.updateProjectionMatrix();
 // })
 
 const scene = new THREE.Scene();
-const renderer = new THREE.WebGLRenderer( {alpha: true });
+const renderer = new THREE.WebGLRenderer( {alpha: true, antialias: true });
 renderer.setSize(modelContainerWidth, modelContainerHeight);
 
 modelContainer.appendChild(renderer.domElement);
